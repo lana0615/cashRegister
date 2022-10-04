@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.cookiePicture = new System.Windows.Forms.PictureBox();
             this.cookieMonster = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,7 @@
             this.taxLabel = new System.Windows.Forms.Label();
             this.totalAmountLabel = new System.Windows.Forms.Label();
             this.subtotalOutput = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.totalOutput = new System.Windows.Forms.Label();
             this.taxOutput = new System.Windows.Forms.Label();
             this.tenderedLabel = new System.Windows.Forms.Label();
             this.tenderedInput = new System.Windows.Forms.TextBox();
@@ -123,6 +124,7 @@
             // recieptOutput
             // 
             this.recieptOutput.BackColor = System.Drawing.Color.White;
+            this.recieptOutput.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.recieptOutput.Location = new System.Drawing.Point(257, 84);
             this.recieptOutput.Name = "recieptOutput";
             this.recieptOutput.Size = new System.Drawing.Size(256, 381);
@@ -192,6 +194,7 @@
             this.calcTotalButton.TabIndex = 15;
             this.calcTotalButton.Text = "Calculate Totals";
             this.calcTotalButton.UseVisualStyleBackColor = false;
+            this.calcTotalButton.Click += new System.EventHandler(this.calcTotalButton_Click);
             // 
             // subtotalLabel
             // 
@@ -227,26 +230,26 @@
             // 
             this.subtotalOutput.AutoSize = true;
             this.subtotalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subtotalOutput.Location = new System.Drawing.Point(187, 246);
+            this.subtotalOutput.Location = new System.Drawing.Point(145, 246);
             this.subtotalOutput.Name = "subtotalOutput";
             this.subtotalOutput.Size = new System.Drawing.Size(18, 20);
             this.subtotalOutput.TabIndex = 19;
             this.subtotalOutput.Text = "0";
             // 
-            // label6
+            // totalOutput
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(187, 310);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "0";
+            this.totalOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalOutput.Location = new System.Drawing.Point(145, 310);
+            this.totalOutput.Name = "totalOutput";
+            this.totalOutput.Size = new System.Drawing.Size(90, 20);
+            this.totalOutput.TabIndex = 20;
+            this.totalOutput.Text = "0";
             // 
             // taxOutput
             // 
             this.taxOutput.AutoSize = true;
             this.taxOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taxOutput.Location = new System.Drawing.Point(187, 279);
+            this.taxOutput.Location = new System.Drawing.Point(145, 279);
             this.taxOutput.Name = "taxOutput";
             this.taxOutput.Size = new System.Drawing.Size(18, 20);
             this.taxOutput.TabIndex = 21;
@@ -280,6 +283,7 @@
             this.calcChangeButton.TabIndex = 24;
             this.calcChangeButton.Text = "Calculate Change";
             this.calcChangeButton.UseVisualStyleBackColor = false;
+            this.calcChangeButton.Click += new System.EventHandler(this.calcChangeButton_Click);
             // 
             // changeLabel
             // 
@@ -296,7 +300,7 @@
             this.changeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeOutput.Location = new System.Drawing.Point(187, 445);
             this.changeOutput.Name = "changeOutput";
-            this.changeOutput.Size = new System.Drawing.Size(38, 20);
+            this.changeOutput.Size = new System.Drawing.Size(64, 20);
             this.changeOutput.TabIndex = 26;
             this.changeOutput.Text = "0";
             // 
@@ -310,6 +314,7 @@
             this.printRecieptButton.TabIndex = 27;
             this.printRecieptButton.Text = "Print Reciept";
             this.printRecieptButton.UseVisualStyleBackColor = false;
+            this.printRecieptButton.Click += new System.EventHandler(this.printRecieptButton_Click);
             // 
             // newOrderButton
             // 
@@ -321,6 +326,7 @@
             this.newOrderButton.TabIndex = 28;
             this.newOrderButton.Text = "New Order";
             this.newOrderButton.UseVisualStyleBackColor = false;
+            this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
             // label5
             // 
@@ -345,7 +351,7 @@
             this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.tenderedLabel);
             this.Controls.Add(this.taxOutput);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.totalOutput);
             this.Controls.Add(this.subtotalOutput);
             this.Controls.Add(this.totalAmountLabel);
             this.Controls.Add(this.taxLabel);
@@ -364,6 +370,7 @@
             this.Controls.Add(this.cookiePicture);
             this.Controls.Add(this.cookieMonster);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "La Patisserie";
             ((System.ComponentModel.ISupportInitialize)(this.cookiePicture)).EndInit();
@@ -393,7 +400,7 @@
         private System.Windows.Forms.Label taxLabel;
         private System.Windows.Forms.Label totalAmountLabel;
         private System.Windows.Forms.Label subtotalOutput;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label totalOutput;
         private System.Windows.Forms.Label taxOutput;
         private System.Windows.Forms.Label tenderedLabel;
         private System.Windows.Forms.TextBox tenderedInput;

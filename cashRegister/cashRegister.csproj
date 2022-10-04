@@ -89,5 +89,14 @@
   <ItemGroup>
     <None Include="Resources\course-desserts-macarons-flickr-68711844%40N07-Michael-Stern-15204286153-4x3.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63112_cupcake_rainbow_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4141627_cupcake_dessert_gift_present_sweet_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printing noise.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -61,6 +61,26 @@ namespace cashRegister.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon _4141627_cupcake_dessert_gift_present_sweet_icon {
+            get {
+                object obj = ResourceManager.GetObject("_4141627_cupcake_dessert_gift_present_sweet_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon _63112_cupcake_rainbow_icon {
+            get {
+                object obj = ResourceManager.GetObject("_63112_cupcake_rainbow_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cookie_monster_cupcakes_IMG_5716 {
@@ -77,6 +97,15 @@ namespace cashRegister.Properties {
             get {
                 object obj = ResourceManager.GetObject("course_desserts_macarons_flickr_68711844_N07_Michael_Stern_15204286153_4x3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream printing_noise {
+            get {
+                return ResourceManager.GetStream("printing_noise", resourceCulture);
             }
         }
     }
