@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+/// Alana Fortin
+/// October 2022
+/// Simple cash register
+
 namespace cashRegister
 {
     public partial class Form1 : Form
@@ -27,13 +31,10 @@ namespace cashRegister
         double totalAmount = 0;
         double tendered = 0;
         double change = 0;
-
         public Form1()
         {
             InitializeComponent();
         }
-
-
         private void calcTotalButton_Click(object sender, EventArgs e)
         {
             try
@@ -42,17 +43,14 @@ namespace cashRegister
                 numOfcookies = Convert.ToDouble(numOfCookiesInput.Text);
                 numOfCupcakes = Convert.ToDouble(numOfCupcakesInput.Text);
                 numOfPies = Convert.ToDouble(numOfPiesInput.Text);
-
                 // calculate Subtotal, tax Amount and total
                 subTotal = numOfcookies * cookiePrice + numOfCupcakes * cupcakePrice + numOfPies * piePrice;
                 taxAmount = taxRate * subTotal;
                 totalAmount = subTotal + taxAmount;
-
                 //output totals
                 subtotalOutput.Text = $"{subTotal.ToString("C")}";
                 taxOutput.Text = $"{taxAmount.ToString("C")}";
                 totalOutput.Text = $"{totalAmount.ToString("C")}";
-
                 //enable button
                 calcChangeButton.Enabled = true;
                 printRecieptButton.Enabled = false;
@@ -64,22 +62,17 @@ namespace cashRegister
                 numOfCupcakesInput.Text = "Error";
                 numOfPiesInput.Text = "Error";
             }
-
         }
-
         private void calcChangeButton_Click(object sender, EventArgs e)
         {
             try
             {
                 //convert to double
                 tendered = Convert.ToDouble(tenderedInput.Text);
-
                 // calculate change
                 change = tendered - totalAmount;
-
                 // output change amount
                 changeOutput.Text = $"{change.ToString("C")}";
-
                 //enable buttons
                 calcTotalButton.Enabled = true;
                 calcChangeButton.Enabled = true;
@@ -91,15 +84,12 @@ namespace cashRegister
             {
                 tenderedInput.Text = "Error";
             }
-
         }
 
         private void printRecieptButton_Click(object sender, EventArgs e)
         {
-
             SoundPlayer alertPlayer = new SoundPlayer(Properties.Resources.printing_noise);
             alertPlayer.Play();
-
             //print reciept
             recieptOutput.Text = $"      La Patisserie";
             Refresh();
@@ -137,19 +127,12 @@ namespace cashRegister
             recieptOutput.Text += $"\n\n   Have a Nice day!!:)";
             Refresh();
             Thread.Sleep(400);
-
             //enable button
             calcTotalButton.Enabled = true;
             calcChangeButton.Enabled = true;
             printRecieptButton.Enabled = true;
             newOrderButton.Enabled = true;
-
-
-
-
-
         }
-
         private void newOrderButton_Click(object sender, EventArgs e)
         {
             //clear amount in inputs
@@ -157,16 +140,13 @@ namespace cashRegister
             numOfCupcakesInput.Text = $"";
             numOfPiesInput.Text = $"";
             tenderedInput.Text = $"";
-
             //clear totals
             subtotalOutput.Text = $"";
             taxOutput.Text = $"";
             totalOutput.Text = $"";
-
             //clear change and tendered
             tendered = 0;
             changeOutput.Text = $"";
-
             //clear Varaibles
             numOfcookies = 0;
             numOfCupcakes = 0;
@@ -176,10 +156,8 @@ namespace cashRegister
             totalAmount = 0;
             tendered = 0;
             change = 0;
-
             //clear reciept output
             recieptOutput.Text = $"";
-
         }
     }
 }

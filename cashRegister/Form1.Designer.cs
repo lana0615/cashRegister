@@ -33,8 +33,8 @@
             this.cookiePicture = new System.Windows.Forms.PictureBox();
             this.cookieMonster = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.divider3 = new System.Windows.Forms.Label();
+            this.divider1 = new System.Windows.Forms.Label();
             this.recieptOutput = new System.Windows.Forms.Label();
             this.numOfCookiesLabel = new System.Windows.Forms.Label();
             this.numberOfCupcakesLabel = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.changeOutput = new System.Windows.Forms.Label();
             this.printRecieptButton = new System.Windows.Forms.Button();
             this.newOrderButton = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.divider2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cookiePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cookieMonster)).BeginInit();
             this.SuspendLayout();
@@ -105,21 +105,21 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "La pâtisserie";
             // 
-            // label3
+            // divider3
             // 
-            this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(521, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 410);
-            this.label3.TabIndex = 5;
+            this.divider3.BackColor = System.Drawing.Color.SteelBlue;
+            this.divider3.Location = new System.Drawing.Point(521, 84);
+            this.divider3.Name = "divider3";
+            this.divider3.Size = new System.Drawing.Size(10, 410);
+            this.divider3.TabIndex = 5;
             // 
-            // label4
+            // divider1
             // 
-            this.label4.BackColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(6, 342);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(219, 10);
-            this.label4.TabIndex = 6;
+            this.divider1.BackColor = System.Drawing.Color.SteelBlue;
+            this.divider1.Location = new System.Drawing.Point(6, 342);
+            this.divider1.Name = "divider1";
+            this.divider1.Size = new System.Drawing.Size(219, 10);
+            this.divider1.TabIndex = 6;
             // 
             // recieptOutput
             // 
@@ -298,7 +298,7 @@
             // changeOutput
             // 
             this.changeOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeOutput.Location = new System.Drawing.Point(187, 445);
+            this.changeOutput.Location = new System.Drawing.Point(145, 445);
             this.changeOutput.Name = "changeOutput";
             this.changeOutput.Size = new System.Drawing.Size(64, 20);
             this.changeOutput.TabIndex = 26;
@@ -328,13 +328,13 @@
             this.newOrderButton.UseVisualStyleBackColor = false;
             this.newOrderButton.Click += new System.EventHandler(this.newOrderButton_Click);
             // 
-            // label5
+            // divider2
             // 
-            this.label5.BackColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(241, 84);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(10, 410);
-            this.label5.TabIndex = 29;
+            this.divider2.BackColor = System.Drawing.Color.SteelBlue;
+            this.divider2.Location = new System.Drawing.Point(241, 84);
+            this.divider2.Name = "divider2";
+            this.divider2.Size = new System.Drawing.Size(10, 410);
+            this.divider2.TabIndex = 29;
             // 
             // Form1
             // 
@@ -342,7 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(724, 530);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.divider2);
             this.Controls.Add(this.newOrderButton);
             this.Controls.Add(this.printRecieptButton);
             this.Controls.Add(this.changeOutput);
@@ -364,8 +364,8 @@
             this.Controls.Add(this.numberOfCupcakesLabel);
             this.Controls.Add(this.numOfCookiesLabel);
             this.Controls.Add(this.recieptOutput);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.divider1);
+            this.Controls.Add(this.divider3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cookiePicture);
             this.Controls.Add(this.cookieMonster);
@@ -386,8 +386,8 @@
         private System.Windows.Forms.PictureBox cookieMonster;
         private System.Windows.Forms.PictureBox cookiePicture;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label divider3;
+        private System.Windows.Forms.Label divider1;
         private System.Windows.Forms.Label recieptOutput;
         private System.Windows.Forms.Label numOfCookiesLabel;
         private System.Windows.Forms.Label numberOfCupcakesLabel;
@@ -409,7 +409,7 @@
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Button printRecieptButton;
         private System.Windows.Forms.Button newOrderButton;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label divider2;
     }
 }
 
